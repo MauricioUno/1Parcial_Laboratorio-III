@@ -1,0 +1,167 @@
+@font-face
+{
+    font-family: poppins;
+    src: url(../Assets/Poppins-Black.ttf);
+}
+
+header, footer {
+    padding: 20px;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
+    font-family: poppins, sans-serif;
+    display: flex;
+}
+
+header {
+    background-image: url(../assets/background.jpeg);;
+}
+
+footer {
+    height: 10vh;
+    flex-direction: row;
+}
+
+header nav ul,
+footer nav ul {
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  gap: 1rem;
+}
+
+header nav ul li a,
+footer nav ul li a {
+  color: white;
+  display: flex;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+header h1 {
+    color: white;
+    width: 100%;
+    max-width: 700px;
+    font-size: 50px;
+}
+
+.barra {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+form {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+    border-radius: 10px;
+    background: whitesmoke;
+    font-family: poppins, sans-serif;
+}
+
+.form-group {
+    gap: 1rem;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.form-group label{
+    flex: 40%;
+    margin-right: 10px;
+}
+
+.form-group input, .form-group select {
+    flex: 50%;
+}
+
+.container-sections {
+    width: 100%;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.container-table {
+    max-width: 100%;
+    overflow-x: scroll;
+}
+
+.container-table table {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-table table thead {
+    width: 100%;
+    background-color: mediumseagreen; 
+}
+
+.container-table table thead tr th {
+    padding: 10px;
+    text-align: center;
+}
+
+.container-table table tbody tr td {
+    padding: 10px;
+    text-align: center;
+    background-color: gainsboro;
+}
+
+#spinner-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    header, footer{
+        height: auto;
+    }
+    header h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .barra {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul, footer nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 30px;
+    }
+    header nav ul li a, footer nav ul li a{
+        font-size: 16px;
+    }
+}

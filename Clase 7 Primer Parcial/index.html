@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estafas Piramidales</title>
+    <link rel="stylesheet" type = "text/css" href="./styles/normalize.css" > 
+    <link rel="stylesheet" type = "text/css" href="./styles/index.css" >
+    <script src="./js/script.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <div class="barra">
+            <div style="display: flex; align-items: center;">
+                <img src="./assets/logo.svg" alt="Logo principal" width="70">
+                <h2 style="color: white;">Sistema de monedas</h2>
+            </div>
+                
+            <nav>
+                <ul>
+                    <li><a href="#">Form</a></li>
+                    <li><a href="#">Button</a></li> 
+                    <li><a href="#">Table</a></li>
+                    <li><a href="#">Local Storage</a></li>
+                </ul>   
+            </nav>
+        </div>
+        <h1>Administrador de monedas</h1>
+    </header>
+    <br>
+    <div class="container-sections full-center">
+            <form action="" method="post" id="form-anuncio">
+                <p>INFORMACION DE LA MONEDA</p>
+                <div class="form-group">
+                    <input 
+                        type="hidden" 
+                        name="idMoneda"
+                        id = "idMoneda"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <input 
+                        type="hidden" 
+                        name="fechaCreacion"
+                        id = "fechaCreacion"
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="nombre:">Nombre:</label>
+                    <input 
+                        type="text" 
+                        name="nombre" 
+                        id = "nombre" 
+                        placeholder="Ingrese nombre.."
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="simbolo:">Simbolo:</label>
+                    <input 
+                        type="text" 
+                        name="simbolo" 
+                        id = "simbolo" 
+                        placeholder="Ingrese simbolo.."
+                    >
+                </div>
+                    
+                <div class="form-group">
+                    <label for="precioActual">Precio Actual:</label>
+                    <input 
+                        type="text" 
+                        name="precioActual" 
+                        id = "precioActual" 
+                        placeholder="Ingrese precio.."
+                    >
+                </div>  
+
+                <div class="form-group">
+                    <label for="cantidadCirculacion">Cantidad en circulacion:</label>
+                    <input 
+                        type="text" 
+                        name="cantidadCirculacion" 
+                        id = "cantidadCirculacion" 
+                        placeholder="Ingrese cantidad.."
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="sitioWeb">Sitio Web:</label>
+                    <input 
+                        type="text" 
+                        name="sitioWeb" 
+                        id = "sitioWeb" 
+                        placeholder="Ingrese sitio.."
+                    >
+                </div>
+                <div class = "form-group">
+                    <label for="TipoConsenso">Consenso:</label>
+                    <select class = "dropwdown-opciones" id = "consenso">
+                        <option value="Proof of Work">Proof of Work</option>
+                        <option value="Proof of Stake">Proof of Stake</option>
+                    </select>
+                </div>
+
+                <div class = "form-group">
+                    <label for="TipoAlgoritmo">Algoritmo:</label>
+                    <select class = "dropwdown-opciones" id = "algoritmo">
+                        <option value="SHA-256">SHA-256</option>
+                        <option value="Ethash">Ethash</option>
+                        <option value="Scrypt">Scrypt</option>
+                        <option value="X11">X11</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <button id = "save-data" class= "btn green" type="submit">Cargar Anuncio</button>
+                </div>
+                <div class="form-group">
+                    <div id = "btn-group" class = "btn-group">
+                        <button id = "save-anuncio" class= "btn hidden green" type = "button">Guardar</button>
+                        <button id = "cancel-anuncio" class= "btn hidden yellow" type = "button">Cancelar</button>
+                        <button id = "delete-anuncio" class= "btn hidden red" type = "button">Eliminar</button>
+                    </div>            
+                </div>
+            </form>
+
+        <div id="spinner-container"></div>
+    
+        <div class="container-table">
+            <table id="table-items" class="table-items">
+              <thead>
+              </thead>
+    
+              <tbody>
+              </tbody>
+              
+            </table>
+        </div>
+    
+        <div>
+          <button id="btn-delete-all" class="btn red">Borrar Datos</button>
+        </div>
+    </div>
+
+    <br>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Anuncio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>   
+            </ul>
+        </nav>
+        <p style="color: white;">Todos los derechos reservados <date>2024</date> &copy;</p>
+      </footer>
+        
+        
+</body>
+</html>
